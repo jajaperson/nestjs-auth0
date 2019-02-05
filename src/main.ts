@@ -1,3 +1,6 @@
+// Configure envirnment variables
+import './common/util/env';
+
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
