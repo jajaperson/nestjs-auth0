@@ -22,7 +22,7 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     });
   }
 
-  validate(payload: JwtPayload) {
+  validate(payload: JwtPayload): JwtPayload {
     if (
       xor(payload.scope.split(' '), ['openid', 'profile', 'email']).length > 0
     ) {
@@ -30,5 +30,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
         'JWT does not possess the requires scope (`openid profile email`).',
       );
     }
+    return payload;
   }
 }
