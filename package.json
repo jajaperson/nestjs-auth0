@@ -1,6 +1,6 @@
 {
   "name": "nest-auth0",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A NestJS application that uses Auth0 for authentication.",
   "author": "James Jensen <jamesarthurjensen@gmail.com>",
   "license": "MIT",
@@ -66,5 +66,13 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jajaperson/nest-auth0.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jajaperson/nest-auth0/issues"
+  },
+  "homepage": "https://github.com/jajaperson/nest-auth0#readme"
 }
