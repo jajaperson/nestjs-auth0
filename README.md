@@ -7,6 +7,9 @@
 > [**`node-jwks-rsa`**](https://github.com/auth0/node-jwks-rsa), which (on top
 > of the first forks modifications) uses a prepare script in order to allow NPM
 > installation directly from GitHub. Hopefully this can be fixed soon.
+>
+> ### Status of the crucial pull request
+> [![GitHub issue/pull request detail](https://img.shields.io/github/pulls/detail/state/auth0/node-jwks-rsa/27.svg)](https://github.com/auth0/node-jwks-rsa/pull/27)
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
