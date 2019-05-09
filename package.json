@@ -24,7 +24,7 @@
     "@nestjs/core": "^5.4.0",
     "@nestjs/passport": "^5.1.0",
     "dotenv": "^6.2.0",
-    "jwks-rsa": "github:jajaperson/node-jwks-rsa",
+    "jwks-rsa": "^1.5.0",
     "lodash": "^4.17.11",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
