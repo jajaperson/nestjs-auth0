@@ -12,7 +12,7 @@ export class AppController {
   }
 
   @Get('protected')
-  @UseGuards(AuthGuard())
+  @UseGuards(AuthGuard('jwt'))
   getProtected(): string {
     return 'This route is protected';
   }
