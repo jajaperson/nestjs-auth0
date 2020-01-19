@@ -10,10 +10,10 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v1
-      - name: install node v12
+      - name: install node v13
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 13
       - name: npm install
         run: npm install
       - name: next build
@@ -25,10 +25,10 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v1
-      - name: install node v12
+      - name: install node v13
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 13
       - name: npm install
         run: npm install
       - name: check codestyle
@@ -42,10 +42,10 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v1
-      - name: install node v12
+      - name: install node v13
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 13
       - name: npm install
         run: npm install
       - name: test
