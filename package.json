@@ -44,7 +44,7 @@
     "@types/node": "^13.1.8",
     "@types/passport": "^1.0.0",
     "@types/passport-jwt": "^3.0.1",
-    "@types/supertest": "^2.0.7",
+    "@types/supertest": "^2.0.8",
     "jest": "^24.7.1",
     "nodemon": "^1.18.11",
     "prettier": "^1.17.0",
