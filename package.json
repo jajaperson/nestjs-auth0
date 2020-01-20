@@ -26,7 +26,7 @@
     "@nestjs/core": "^6.0.4",
     "@nestjs/passport": "^6.1.0",
     "@nestjs/platform-express": "^6.0.4",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "jwks-rsa": "^1.5.1",
     "lodash": "^4.17.14",
     "passport": "^0.4.1",
