@@ -16,7 +16,7 @@ jobs:
           node-version: 13
       - name: npm install
         run: npm install
-      - name: next build
+      - name: build
         run: npm run build
   lint:
     strategy:
