@@ -18,6 +18,12 @@ jobs:
         run: npm install
       - name: unit tests
         run: npm test
+      - name: generate coverage report
+        run: npm run test:cov
+      - name: upload coverage report
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
   e2e:
     strategy:
       matrix:
