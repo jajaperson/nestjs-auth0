@@ -1,19 +1,18 @@
 {
-  "name": "nest-auth0",
-  "version": "1.1.2",
-  "private": true,
-  "description": "A NestJS application that uses Auth0 for authentication.",
-  "author": "James Jensen <jamesarthurjensen@gmail.com>",
+  "name": "nestjs-auth0",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "format:check": "prettier --check \"src/**/*.ts\"",
-    "start": "ts-node -r tsconfig-paths/register src/main.ts",
-    "start:dev": "nodemon",
-    "start:debug": "nodemon --config nodemon-debug.json",
-    "prestart:prod": "rimraf dist && npm run build",
-    "start:prod": "node dist/main.js",
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -22,39 +21,36 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
-    "@nestjs/common": "^6.0.6",
-    "@nestjs/core": "^6.0.4",
-    "@nestjs/passport": "^6.1.0",
-    "@nestjs/platform-express": "^6.0.4",
-    "dotenv": "^8.0.0",
-    "jwks-rsa": "^1.5.1",
-    "lodash": "^4.17.14",
+    "@nestjs/common": "^6.7.2",
+    "@nestjs/core": "^6.7.2",
+    "@nestjs/passport": "^6.1.1",
+    "@nestjs/platform-express": "^6.7.2",
+    "dotenv": "^8.2.0",
+    "jwks-rsa": "^1.6.2",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.0",
-    "rxjs": "^6.4.0"
+    "rxjs": "^6.5.3"
   },
   "devDependencies": {
-    "@nestjs/testing": "^6.1.1",
-    "@types/dotenv": "^6.1.1",
-    "@types/express": "^4.16.1",
-    "@types/jest": "^24.0.11",
-    "@types/lodash": "^4.14.134",
-    "@types/node": "^13.1.8",
-    "@types/passport": "^1.0.0",
-    "@types/passport-jwt": "^3.0.1",
-    "@types/supertest": "^2.0.7",
-    "jest": "^24.7.1",
-    "nodemon": "^1.18.11",
-    "prettier": "^1.17.0",
+    "@nestjs/cli": "^6.9.0",
+    "@nestjs/schematics": "^6.7.0",
+    "@nestjs/testing": "^6.7.1",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.5",
+    "@types/passport-jwt": "^3.0.3",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
     "supertest": "^4.0.2",
-    "ts-jest": "^24.0.2",
-    "ts-node": "^8.1.0",
-    "tsconfig-paths": "^3.8.0",
-    "tslint": "5.11.0",
-    "typescript": "^3.5.1",
-    "wait-on": "^3.2.0"
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^6.1.1",
+    "ts-node": "^8.4.1",
+    "tsconfig-paths": "^3.9.0",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -69,16 +65,5 @@
     },
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jajaperson/nest-auth0.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jajaperson/nest-auth0/issues"
-  },
-  "homepage": "https://github.com/jajaperson/nest-auth0#readme",
-  "engines": {
-    "node": ">=13.0.0"
   }
 }

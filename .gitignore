@@ -123,3 +123,9 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
+
+# Nest build output
+dist/
+
+# Code coverage reports
+coverage/
