@@ -2,16 +2,10 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-[travis-image]: https://api.travis-ci.org/nestjs/nest.svg?branch=master
-[travis-url]: https://travis-ci.org/nestjs/nest
-[linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
-[linux-url]: https://travis-ci.org/nestjs/nest
-
   <p align="center"><a href="https://nestjs.com">NestJS</a> + <a href="https://auth0.com">Auth0</a> = :heart:</p>
     <p align="center">
     <a href="https://github.com/jajaperson/nestjs-auth0/releases"><img src="https://img.shields.io/github/v/tag/jajaperson/nestjs-auth0?label=version" /></a>
-    <a href="https://github.com/jajaperson/nestjs-auth0/actions"><img src="https://github.com/jajaperson/nestjs-auth0/workflows/build/badge.svg
-" /></a>
+    <a href="https://github.com/jajaperson/nestjs-auth0/actions"><img src="https://github.com/jajaperson/nestjs-auth0/workflows/build/badge.svg" /></a>
 
 <!-- <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
