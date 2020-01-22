@@ -124,5 +124,8 @@ typings/
 .env
 .env.test
 
-# Nest
+# Nest build output
 dist/
+
+# Code coverage reports
+coverage/

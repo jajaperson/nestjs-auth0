@@ -18,6 +18,21 @@ jobs:
         run: npm install
       - name: build
         run: npm run build
+  format:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: install node v13
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13
+      - name: npm install
+        run: npm install
+      - name: format
+        run: npm run format
   lint:
     strategy:
       matrix:
@@ -31,11 +46,9 @@ jobs:
           node-version: 13
       - name: npm install
         run: npm install
-      - name: check codestyle
-        run: npm run format:check
       - name: lint
         run: npm run lint
-  test:
+  test/unit:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest]
@@ -48,5 +61,20 @@ jobs:
           node-version: 13
       - name: npm install
         run: npm install
-      - name: test
+      - name: unit tests
         run: npm test
+  test/e2e:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.platform }}
+    steps:
+      - uses: actions/checkout@v1
+      - name: install node v13
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13
+      - name: npm install
+        run: npm install
+      - name: e2e tests
+        run: npm test:e2e
