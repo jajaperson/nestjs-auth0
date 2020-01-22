@@ -48,7 +48,7 @@ jobs:
         run: npm install
       - name: lint
         run: npm run lint
-  test/unit:
+  test-unit:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest]
@@ -63,7 +63,7 @@ jobs:
         run: npm install
       - name: unit tests
         run: npm test
-  test/e2e:
+  test-e2e:
     strategy:
       matrix:
         platform: [ubuntu-latest, macos-latest]
