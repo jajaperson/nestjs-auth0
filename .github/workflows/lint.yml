@@ -17,7 +17,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: format
-        run: npm run format
+        run: npm run format:check
   tslint:
     strategy:
       matrix:
