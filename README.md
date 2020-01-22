@@ -9,6 +9,7 @@
 
   <p align="center"><a href="https://nestjs.com">NestJS</a> + <a href="https://auth0.com">Auth0</a> = :heart:</p>
     <p align="center">
+    <a href="https://github.com/jajaperson/nestjs-auth0/releases"><img src="https://img.shields.io/github/v/tag/jajaperson/nestjs-auth0?label=version" /></a>
     <a href="https://github.com/jajaperson/nestjs-auth0/actions"><img src="https://github.com/jajaperson/nestjs-auth0/workflows/build/badge.svg
 " /></a>
 
