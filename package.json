@@ -1,8 +1,17 @@
 {
   "name": "nestjs-auth0",
+  "private": true,
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "A template for using Auth0 with the Nest framework.",
+  "author": "James Jensen <jamesarthurjensen@gmail.com>",
+  "homepage": "https://github.com/jajaperson/nestjs-auth0",
+  "bugs": {
+    "url": "https://github.com/jajaperson/nestjs-auth0/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jajaperson/nestjs-auth0.git"
+  },
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",

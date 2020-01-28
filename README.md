@@ -15,8 +15,6 @@
     <img src="https://codecov.io/gh/jajaperson/nestjs-auth0/branch/master/graph/badge.svg" />
   </a>
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
 
@@ -38,6 +36,8 @@ AUTH0_AUDIENCE={http://localhost:3000 or your production domain accordingly}
 ```
 
 A template `.env` file can be found at [`.env.example`](.env.example).
+
+You may also like to remove all the irrelevant metadata from the `package.json`, suck as the `repository`, `homepage`, `bugs`, and `description` fields.
 
 ## Installation
 
