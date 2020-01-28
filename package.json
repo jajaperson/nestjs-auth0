@@ -39,7 +39,7 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "reflect-metadata": "^0.1.13",
-    "rimraf": "^3.0.0",
+    "rimraf": "^3.0.1",
     "rxjs": "^6.5.3"
   },
   "devDependencies": {
