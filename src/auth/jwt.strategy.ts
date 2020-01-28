@@ -1,4 +1,5 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import { Injectable, UnauthorizedException, Inject } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { PassportStrategy } from '@nestjs/passport';
 import { Strategy, ExtractJwt } from 'passport-jwt';
 import { passportJwtSecret } from 'jwks-rsa';
@@ -7,18 +8,20 @@ import { JwtPayload } from './interfaces/jwt-payload.interface';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
-  constructor() {
+  constructor(private readonly configService: ConfigService) {
     super({
       secretOrKeyProvider: passportJwtSecret({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        jwksUri: `https://${process.env.AUTH0_DOMAIN}/.well-known/jwks.json`,
+        jwksUri: `https://${configService.get<string>(
+          'auth.domain',
+        )}/.well-known/jwks.json`,
       }),
 
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      audience: process.env.AUTH0_AUDIENCE,
-      issuer: `https://${process.env.AUTH0_DOMAIN}`,
+      audience: configService.get<string>('auth.audience'),
+      issuer: `https://${configService.get<string>('auth.domain')}`,
     });
   }
 
@@ -26,8 +29,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     const minimumScope = ['openid', 'profile', 'email'];
 
     if (
-      payload.scope.split(' ').filter(scope => minimumScope.indexOf(scope) > -1)
-        .length !== 3
+      payload?.scope
+        ?.split(' ')
+        .filter(scope => minimumScope.indexOf(scope) > -1).length !== 3
     ) {
       throw new UnauthorizedException(
         'JWT does not possess the requires scope (`openid profile email`).',

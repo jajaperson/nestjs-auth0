@@ -1,4 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
+import { ConfigModule } from '@nestjs/config';
+
+import authConfig from '../config/auth.config';
 
 import { JwtStrategy } from './jwt.strategy';
 
@@ -7,6 +10,7 @@ describe('JwtStrategy', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
+      imports: [ConfigModule.forFeature(authConfig)],
       providers: [JwtStrategy],
     }).compile();
 
@@ -28,6 +32,11 @@ describe('JwtStrategy', () => {
       };
 
       expect(() => jwtStrategy.validate(mockPayload)).toThrow();
+    });
+
+    it('should throw UnauthorizedException for empty JWT payloads', () => {
+      expect(() => jwtStrategy.validate(null)).toThrow();
+      expect(() => jwtStrategy.validate({})).toThrow();
     });
   });
 });
