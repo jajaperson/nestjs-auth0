@@ -14,6 +14,9 @@
   <a href="https://codecov.io/gh/jajaperson/nestjs-auth0">
     <img src="https://codecov.io/gh/jajaperson/nestjs-auth0/branch/master/graph/badge.svg" />
   </a>
+  <a href="https://dependabot.com">
+    <img src="https://api.dependabot.com/badges/status?host=github&repo=jajaperson/nestjs-auth0" />
+  </a>
 </p>
 
 ## Description
