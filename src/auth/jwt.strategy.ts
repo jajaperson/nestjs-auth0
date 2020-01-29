@@ -35,7 +35,7 @@ export class JwtStrategy extends PassportStrategy(BaseStrategy) {
         .filter(scope => minimumScope.indexOf(scope) > -1).length !== 3
     ) {
       throw new UnauthorizedException(
-        'JWT does not possess the requires scope (`openid profile email`).',
+        'JWT does not possess the required scope (`openid profile email`).',
       );
     }
 
