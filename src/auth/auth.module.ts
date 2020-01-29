@@ -11,6 +11,6 @@ const passportModule = PassportModule.register({ defaultStrategy: 'jwt' });
 @Module({
   imports: [ConfigModule.forFeature(authConfig), passportModule],
   providers: [JwtStrategy],
-  exports: [passportModule],
+  exports: [passportModule, JwtStrategy],
 })
 export class AuthModule {}
