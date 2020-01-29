@@ -6,11 +6,12 @@ import authConfig from '../config/auth.config';
 
 import { JwtStrategy } from './jwt.strategy';
 
-const passportModule = PassportModule.register({ defaultStrategy: 'jwt' });
-
 @Module({
-  imports: [ConfigModule.forFeature(authConfig), passportModule],
+  imports: [
+    ConfigModule.forFeature(authConfig),
+    PassportModule.register({ defaultStrategy: 'jwt' }),
+  ],
   providers: [JwtStrategy],
-  exports: [passportModule, JwtStrategy],
+  exports: [PassportModule, JwtStrategy],
 })
 export class AuthModule {}

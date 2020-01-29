@@ -1,5 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConfigModule } from '@nestjs/config';
+import { PassportModule } from '@nestjs/passport';
 
 import authConfig from '../config/auth.config';
 
@@ -10,7 +11,7 @@ describe('JwtStrategy', () => {
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      imports: [ConfigModule.forFeature(authConfig)],
+      imports: [ConfigModule.forFeature(authConfig), PassportModule],
       providers: [JwtStrategy],
     }).compile();
 
