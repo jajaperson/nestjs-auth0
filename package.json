@@ -32,7 +32,7 @@
   "dependencies": {
     "@nestjs/common": "^6.11.4",
     "@nestjs/config": "^0.1.0",
-    "@nestjs/core": "^6.11.4",
+    "@nestjs/core": "^6.11.5",
     "@nestjs/passport": "^6.1.1",
     "@nestjs/platform-express": "^6.11.4",
     "jwks-rsa": "^1.6.2",
