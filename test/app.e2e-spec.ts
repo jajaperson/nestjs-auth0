@@ -23,8 +23,6 @@ describe('AppController (e2e)', () => {
   });
 
   test('/protected (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/protected')
-      .expect(401);
+    return request(app.getHttpServer()).get('/protected').expect(401);
   });
 });
