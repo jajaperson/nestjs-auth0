@@ -32,7 +32,7 @@ export class JwtStrategy extends PassportStrategy(BaseStrategy) {
     if (
       payload?.scope
         ?.split(' ')
-        .filter(scope => minimumScope.indexOf(scope) > -1).length !== 3
+        .filter((scope) => minimumScope.indexOf(scope) > -1).length !== 3
     ) {
       throw new UnauthorizedException(
         'JWT does not possess the required scope (`openid profile email`).',
