@@ -103,7 +103,7 @@ functionality, where the constructor sets up core token validation using the
 is done in the [`.env`](.env.example) file using
 [@nestjs/config](https://ghub.io/@nestjs/config) (see [above](#Setup)). On any
 request with authentication, the decoded JSON web token (which should follow
-[`JwtPayload`](src/auth/innterfaced/jwt-payload.interface.ts)) is passed to the
+[`JwtPayload`](src/auth/interface/jwt-payload.interface.ts)) is passed to the
 `validate`, which checks the token for the required scopes.
 
 The [`AuthModule`](src/auth/auth.module.ts) itself exports both `PassportModule`
