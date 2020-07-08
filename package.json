@@ -34,7 +34,7 @@
     "@nestjs/config": "^0.5.0",
     "@nestjs/core": "^6.11.11",
     "@nestjs/passport": "^7.1.0",
-    "@nestjs/platform-express": "^7.2.0",
+    "@nestjs/platform-express": "^7.3.2",
     "jwks-rsa": "^1.8.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
