@@ -4,10 +4,7 @@ on: [push]
 
 jobs:
   unit:
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: install node v13
@@ -25,10 +22,7 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
   e2e:
-    strategy:
-      matrix:
-        platform: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: install node v13
