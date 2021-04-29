@@ -1,0 +1,78 @@
+version: 2
+registries:
+  npm-registry-npm-fontawesome-com:
+    type: npm-registry
+    url: https://npm.fontawesome.com/
+    token: "${{secrets.NPM_REGISTRY_NPM_FONTAWESOME_COM_TOKEN}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.22
+    - 14.14.25
+    - 14.14.26
+    - 14.14.27
+    - 14.14.28
+    - 14.14.29
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.36
+    - 14.14.37
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: ts-loader
+    versions:
+    - 8.0.18
+    - 8.1.0
+    - 8.2.0
+    - 9.0.2
+    - 9.1.0
+  - dependency-name: y18n
+    versions:
+    - 4.0.1
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.20
+    - 26.0.21
+    - 26.0.22
+  - dependency-name: rxjs
+    versions:
+    - 6.6.6
+  - dependency-name: "@nestjs/platform-express"
+    versions:
+    - 7.6.11
+    - 7.6.12
+    - 7.6.13
+    - 7.6.14
+    - 7.6.7
+    - 7.6.8
+    - 7.6.9
+  - dependency-name: "@nestjs/schematics"
+    versions:
+    - 7.2.7
+    - 7.2.8
+    - 7.2.9
+    - 7.3.0
+  - dependency-name: jwks-rsa
+    versions:
+    - 1.12.2
+    - 1.12.3
+  - dependency-name: "@types/passport-jwt"
+    versions:
+    - 3.0.4
+  - dependency-name: "@nestjs/config"
+    versions:
+    - 0.6.2
+  registries:
+  - npm-registry-npm-fontawesome-com
