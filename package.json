@@ -33,7 +33,7 @@
     "@nestjs/common": "^6.11.11",
     "@nestjs/config": "^0.5.0",
     "@nestjs/core": "^6.11.11",
-    "@nestjs/passport": "^7.1.0",
+    "@nestjs/passport": "^8.0.0",
     "@nestjs/platform-express": "^7.6.5",
     "jwks-rsa": "^2.0.0",
     "passport": "^0.4.1",
